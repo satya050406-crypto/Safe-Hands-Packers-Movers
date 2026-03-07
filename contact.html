@@ -109,15 +109,113 @@
           <input type="tel" id="mobile" placeholder="Phone Number" required
             style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
           <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-            <input type="text" id="from" placeholder="Move From (Origin)" required
+            <input type="text" id="from" list="up-areas" placeholder="Move From (Origin)" required
               style="flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
-            <input type="text" id="to" placeholder="Move To (Destination)" required
+            <input type="text" id="to" list="up-areas" placeholder="Move To (Destination)" required
               style="flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
           </div>
+          <datalist id="up-areas">
+            <option value="Lucknow">
+            <option value="Kanpur">
+            <option value="Varanasi">
+            <option value="Prayagraj (Allahabad)">
+            <option value="Agra">
+            <option value="Meerut">
+            <option value="Ghaziabad">
+            <option value="Noida">
+            <option value="Greater Noida">
+            <option value="Bareilly">
+            <option value="Aligarh">
+            <option value="Moradabad">
+            <option value="Saharanpur">
+            <option value="Gorakhpur">
+            <option value="Jhansi">
+            <option value="Firozabad">
+            <option value="Loni">
+            <option value="Sambhal">
+            <option value="Mathura">
+            <option value="Shahjahanpur">
+            <option value="Ayodhya">
+            <option value="Faizabad">
+            <option value="Etawah">
+            <option value="Mirzapur">
+            <option value="Bulandshahr">
+            <option value="Muzaffarnagar">
+            <option value="Amroha">
+            <option value="Jaunpur">
+            <option value="Sitapur">
+            <option value="Bahraich">
+            <option value="Rae Bareli">
+            <option value="Unnao">
+            <option value="Sultanpur">
+            <option value="Lakhimpur">
+            <option value="Hardoi">
+            <option value="Fatehpur">
+            <option value="Azamgarh">
+            <option value="Basti">
+            <option value="Gonda">
+            <option value="Ghazipur">
+            <option value="Deoria">
+            <option value="Barabanki">
+            <option value="Ballia">
+            <option value="Orai">
+            <option value="Banda">
+            <option value="Shamli">
+            <option value="Bijnor">
+            <option value="Chandauli">
+            <option value="Hamirpur">
+            <option value="Jalaun">
+            <option value="Kannauj">
+            <option value="Kasganj">
+            <option value="Kushi Nagar">
+            <option value="Lalitpur">
+            <option value="Mainpuri">
+            <option value="Mahoba">
+            <option value="Padrauna">
+            <option value="Pratapgarh">
+            <option value="Rampur">
+            <option value="Sant Kabir Nagar">
+            <option value="Bhadohi">
+            <option value="Shravasti">
+            <option value="Siddharthnagar">
+            <option value="Sonbhadra">
+            <option value="Alambagh, Lucknow">
+            <option value="Gomti Nagar, Lucknow">
+            <option value="Indira Nagar, Lucknow">
+            <option value="Hazratganj, Lucknow">
+            <option value="Aliganj, Lucknow">
+            <option value="Charbagh, Lucknow">
+            <option value="Indirapuram, Ghaziabad">
+            <option value="Vaishali, Ghaziabad">
+            <option value="Crossing Republik, Ghaziabad">
+            <option value="Pari Chowk, Greater Noida">
+          </datalist>
           <input type="text" id="floor" placeholder="Floor Number (e.g., 2nd Floor, Ground Floor)" required
             style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+          <input type="text" id="date" placeholder="Shifting Date" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" required
+            style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            
+          <div style="margin-bottom: 10px;">
+            <p style="font-size: 14px; color: #555; margin: 0 0 8px 0; font-weight: bold;">Auto-Add Items:</p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px;">
+              <button type="button" onclick="addQuickItem('1 BHK Setup')" style="padding: 5px 12px; border: 1px solid #d32f2f; background: white; color: #d32f2f; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#d32f2f'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#d32f2f'">+ 1 BHK</button>
+              <button type="button" onclick="addQuickItem('2 BHK Setup')" style="padding: 5px 12px; border: 1px solid #d32f2f; background: white; color: #d32f2f; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#d32f2f'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#d32f2f'">+ 2 BHK</button>
+              <button type="button" onclick="addQuickItem('3 BHK Setup')" style="padding: 5px 12px; border: 1px solid #d32f2f; background: white; color: #d32f2f; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#d32f2f'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#d32f2f'">+ 3 BHK</button>
+              <button type="button" onclick="addQuickItem('Few Items')" style="padding: 5px 12px; border: 1px solid #d32f2f; background: white; color: #d32f2f; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#d32f2f'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#d32f2f'">+ Few Items</button>
+              
+              <button type="button" onclick="addQuickItem('Fridge')" style="padding: 5px 12px; border: 1px solid #666; background: white; color: #666; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#666'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#666'">+ Fridge</button>
+              <button type="button" onclick="addQuickItem('Washing Machine')" style="padding: 5px 12px; border: 1px solid #666; background: white; color: #666; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#666'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#666'">+ Washing Machine</button>
+              <button type="button" onclick="addQuickItem('AC')" style="padding: 5px 12px; border: 1px solid #666; background: white; color: #666; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#666'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#666'">+ AC</button>
+              <button type="button" onclick="addQuickItem('Double Bed')" style="padding: 5px 12px; border: 1px solid #666; background: white; color: #666; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#666'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#666'">+ Bed</button>
+              <button type="button" onclick="addQuickItem('Sofa Set')" style="padding: 5px 12px; border: 1px solid #666; background: white; color: #666; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#666'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#666'">+ Sofa</button>
+              <button type="button" onclick="addQuickItem('Almirah')" style="padding: 5px 12px; border: 1px solid #666; background: white; color: #666; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#666'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#666'">+ Almirah</button>
+              <button type="button" onclick="addQuickItem('Bike')" style="padding: 5px 12px; border: 1px solid #666; background: white; color: #666; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#666'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#666'">+ Bike</button>
+              <button type="button" onclick="addQuickItem('Car')" style="padding: 5px 12px; border: 1px solid #666; background: white; color: #666; border-radius: 20px; font-size: 13px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#666'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#666'">+ Car</button>
+            </div>
+          </div>
+          
           <textarea id="items" placeholder="Household Items List (e.g., 1 Fridge, 1 Sofa, 5 Boxes...)" required
-            style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; height: 120px; resize: none;"></textarea>
+            style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; height: 120px; resize: none;"></textarea>
           <button type="submit" class="btn-red"
             style="width: 100%; padding: 14px; background: #d32f2f; color: #fff; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">Send
             on WhatsApp</button>
@@ -143,6 +241,15 @@
   </a>
 
   <script>
+    function addQuickItem(itemName) {
+      var textarea = document.getElementById('items');
+      if (textarea.value) {
+        textarea.value += ', ' + itemName;
+      } else {
+        textarea.value = itemName;
+      }
+    }
+
     document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
 
@@ -151,6 +258,7 @@
       var from = document.getElementById('from').value;
       var to = document.getElementById('to').value;
       var floor = document.getElementById('floor').value;
+      var date = document.getElementById('date').value;
       var items = document.getElementById('items').value;
 
       var whatsappMessage = "Hello, I want to book a Shifting Service." +
@@ -160,6 +268,7 @@
         "%0a*Move From:* " + from +
         "%0a*Move To:* " + to +
         "%0a*Floor Number:* " + floor +
+        "%0a*Shifting Date:* " + date +
         "%0a*Items List:* " + items;
 
       var whatsappUrl = "https://wa.me/919211396141?text=" + whatsappMessage;
