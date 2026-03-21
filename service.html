@@ -13,81 +13,99 @@
   <link rel="icon" type="image/png" href="favicon.ico.png">
   <style>
     .service-hero {
-      background: linear-gradient(rgba(1, 11, 26, 0.8), rgba(1, 11, 26, 0.8)), url('https://images.unsplash.com/photo-1512418490979-92798ccc13b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background: linear-gradient(to right, rgba(10, 17, 40, 0.8), rgba(10, 17, 40, 0.5)), url('https://images.unsplash.com/photo-1512418490979-92798ccc13b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
       background-size: cover;
       background-position: center;
-      padding: 100px 8%;
+      background-attachment: fixed;
+      padding: 120px 8%;
       text-align: center;
       color: #fff;
+      animation: fadeIn 1s ease forwards;
     }
 
     .service-hero h1 {
-      font-size: 42px;
-      color: #ffbe0b;
-      margin-bottom: 20px;
+      font-size: 50px;
+      color: var(--secondary);
+      margin-bottom: 15px;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      animation: fadeUp 1s ease forwards;
+    }
+    
+    .service-hero p {
+      font-size: 18px;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.2s;
     }
 
     .service-detail-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 40px;
-      padding: 60px 8%;
+      padding: 90px 8%;
+      background: var(--bg-color);
     }
 
     .service-detail-card {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 12px;
+      background: var(--surface);
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border-top: 5px solid transparent;
     }
 
     .service-detail-card:hover {
       transform: translateY(-10px);
+      box-shadow: var(--shadow-md);
+      border-top-color: var(--primary);
     }
 
     .service-img {
-      height: 200px;
+      height: 220px;
       background-size: cover;
       background-position: center;
     }
 
     .service-content {
-      padding: 25px;
+      padding: 30px;
     }
 
     .service-content h2 {
-      color: #d32f2f;
+      color: var(--text-main);
       margin-bottom: 15px;
       font-size: 24px;
+      transition: var(--transition);
+    }
+    
+    .service-detail-card:hover .service-content h2 {
+      color: var(--primary);
     }
 
     .service-content p {
-      color: #555;
+      color: var(--text-muted);
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 20px;
     }
 
     .feature-list {
       list-style: none;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .feature-list li {
       margin-bottom: 10px;
-      padding-left: 25px;
+      padding-left: 28px;
       position: relative;
-      font-size: 14px;
-      color: #333;
+      font-size: 15px;
+      color: var(--text-muted);
     }
 
     .feature-list li::before {
       content: '✔';
       position: absolute;
       left: 0;
-      color: #ffbe0b;
+      color: var(--secondary);
       font-weight: bold;
     }
   </style>
@@ -95,20 +113,32 @@
 
 <body>
 
+  <!-- ================= TOPBAR ================= -->
+  <div class="topbar">
+    <div class="topbar-contact">
+      <span>📞 +91 9211396141</span>
+      <span class="hide-mobile">📧 safehandspackersmovers05@gmail.com</span>
+    </div>
+    <div class="topbar-social">
+      <a href="contact.html">24/7 Support Available</a>
+    </div>
+  </div>
+
   <!-- ================= HEADER ================= -->
   <header class="header">
     <div class="nav">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="service.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
       <div class="logo">
         <a href="index.html">
           <img src="image/logo.png" alt="Safe Hands Packers & Movers">
         </a>
       </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
